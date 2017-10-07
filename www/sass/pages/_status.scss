@@ -1,0 +1,66 @@
+/*Status page*/
+
+#statusImg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    clear: both;
+    text-align: center;
+}
+
+#statusText {
+    font-size: 16px;
+    font-weight: bold;
+    float: none;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px 20px;
+}
+
+#runningHeader p {
+    float: left;
+    width: 400px;
+}
+
+#runningHeader h3 {
+    text-align: left;
+    padding: 0;
+    float: left;
+}
+
+#runningHeader form {
+    float: right;
+}
+
+.tip {
+    width: 600px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+.tip th {
+    background-color: #007;
+    color: white;
+    text-align: left;
+    padding: 2px 5px;
+    border: 1px solid black;
+}
+
+.tip td {
+    background-color: #eee;
+    padding: 1em;
+}
+
+.tip a {
+    color: #00b;
+    text-decoration: none;
+}
+
+.tip_note {
+    display: block;
+    float: right;
+}

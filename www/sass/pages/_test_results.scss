@@ -1,0 +1,176 @@
+/* Test Reults Pages */
+
+.grades {
+    float: right;
+    line-height: 1.2em;
+    font-size: 11px;
+}
+
+.grades li {
+    float: left;
+    width: 59px;
+    margin-left: 10px;
+}
+
+.grades h2 {
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    margin: 0;
+    padding-top: 11px;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.grades .A {
+    background-color: #9bce54;
+}
+
+.grades .B {
+    background-color: #9bce54;
+}
+
+.grades .C {
+    background-color: #f1c52e;
+}
+
+.grades .D {
+    background-color: #e33535;
+}
+
+.grades .F {
+    background-color: #e33535;
+}
+
+.grades a {
+    text-decoration: none;
+}
+
+.grades.smaller {
+    font-size: 10px;
+}
+
+.grades.smaller li {
+    width: 54px;
+    margin-left: 5px;
+}
+
+#test_results-container {
+    margin: 0 -25px -25px;
+}
+
+#test_results_running-container {
+    margin: 0 -25px 0px;
+}
+
+.test_results {
+    clear: both;
+}
+
+.test_results-content {
+    padding: 15px 20px 5px;
+}
+
+#result {
+    background-color: #fff;
+    text-align: center;
+    margin: -15px -20px 0px;
+    padding: 0px 25px;
+}
+
+#testinfo {
+    text-align: left;
+    float: left;
+}
+
+#download {
+    text-align: right;
+    clear: both;
+    padding: 5px 0px;
+}
+
+#average {
+    text-align: center;
+}
+
+#result h2 {
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+table.result {
+    width: 920px;
+}
+
+.subtitle {
+    margin: -24px 0 24px;
+    font-weight: bold;
+}
+
+.dynaTrace {
+    background-color: #ffff5d;
+}
+
+#script_in_results-container {
+    clear: both;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0 0 5px 0;
+}
+
+#more_checks {
+    padding: 10px 15px 30px;
+}
+
+.anchor {
+    position: relative;
+    top: -110px;
+}
+
+#tooltip {
+    position: absolute;
+    z-index: 3000;
+    border: 1px solid #111;
+    background-color: #eee;
+    padding: 5px;
+}
+
+#tooltip h3,
+#tooltip div {
+    margin: 0;
+}
+
+.batchResults {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-collapse: collapse;
+    border: 0px white solid;
+}
+
+.batchResults th,
+.batchResults td {
+    border: 1px silver solid;
+    padding: 5px 15px;
+}
+
+.batchResults th {
+    background: gainsboro;
+}
+
+.batchResults .good {
+    color: green;
+    font-weight: bold;
+}
+
+.batchResults .bad {
+    color: red;
+    font-weight: bold;
+}
+
+.batchResults th.empty {
+    background: #fff;
+    border-top: 1px white solid;
+    border-left: 1px white solid;
+}
+

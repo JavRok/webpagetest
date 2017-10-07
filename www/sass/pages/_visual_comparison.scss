@@ -1,0 +1,48 @@
+/* visual comparison page */
+
+#visual_comparison a {
+    color: #fff
+}
+
+#visual_comparison input {
+    margin-right: 5px;
+}
+
+#visual_comparison .urldiv {
+    padding-top: 0.5em;
+}
+
+#visual_comparison .industry {
+    margin-right: 20px;
+    float: left;
+    padding-bottom: 10px;
+    width: 140px;
+    min-height: 140px;
+    font-size: 10px;
+}
+
+#visual_comparison .indHead {
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: black;
+    color: #f1c52e;
+    font-weight: bold;
+    width: 100%;
+}
+
+#visual_comparison .indBody {
+    padding-left: 5px;
+    width: 100%;
+}
+
+#footnote {
+    margin-top: 30px;
+    background-color: #e2e2e2;
+    color: #000;
+    padding: 10px;
+}
+
+#footnote a {
+    color: #000;
+}

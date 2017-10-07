@@ -74,9 +74,11 @@ if (!defined('EMBED')) {
         }
     ?>
     </div>
-</div>
 
-<div id="nav_bkg"><ul id="nav" class="cufon-dincond_black"><?php
+
+    <div class="menu_btn">Menu</div>
+    <ul id="nav" aria-role="navigation">
+        <button class="close_menu" aria-label="Close">✖</button><?php
         if ($id) {
             $resultUrl = "/results.php?test=$id";
             if (array_key_exists('end', $_REQUEST))
@@ -129,6 +131,7 @@ if (!defined('EMBED')) {
 ?></ul>
 
 </div>
+
 
 <?php
 if (!defined('BARE_UI') && isset($settings['alert']) && strlen($settings['alert'])) {

@@ -1,0 +1,43 @@
+/* Test Sub-box */
+
+#test_subbox-container {
+    color: #222;
+}
+
+#test_subbox-container .ui-tabs-nav {
+    height: 29px;
+    line-height: 29px;
+}
+
+#test_subbox-container .ui-tabs-nav li {
+    float: left;
+    height: 28px;
+    margin: 0 1px 1px 0;
+    background-color: #bbb;
+}
+
+#test_subbox-container .ui-tabs-nav li.ui-tabs-selected {
+    margin: 0 1px 0 0;
+    height: inherit;
+    background-color: #eee;
+}
+
+#test_subbox-container .ui-tabs-nav li a {
+    display: block;
+    height: inherit;
+    color: #444;
+    padding: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.test_subbox {
+    overflow: hidden;
+    padding: 20px;
+    background-color: #eee;
+}
+
+.test_subbox.ui-tabs-hide {
+    display: none;
+}
