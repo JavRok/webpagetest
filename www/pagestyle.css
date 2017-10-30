@@ -87,6 +87,7 @@ h2 .medium {
   font-size: 18px; }
 
 .page {
+  min-width: 320px;
   margin: 0 auto;
   overflow: hidden; }
 
@@ -94,9 +95,11 @@ h2 .medium {
   position: relative;
   padding: 0;
   background-color: #fff;
+  width: 100%;
   max-width: 980px;
   clear: both;
-  margin: 0 auto; }
+  margin: 0 auto;
+  box-sizing: border-box; }
 
 .centered {
   text-align: center; }
@@ -315,7 +318,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  margin: 22px;
+  margin: 20px;
   padding: 10px 5px;
   height: 33px;
   line-height: 33px; }
@@ -458,44 +461,51 @@ body {
 /* Test Box */
 #test_box-container {
   float: left;
-  width: 709px;
+  width: 100%;
   color: #fff; }
 
-#test_box-container .ui-tabs-nav {
+.ui-tabs-nav {
   height: 29px;
   line-height: 29px; }
-
-#test_box-container .ui-tabs-nav li {
-  float: left;
-  height: 28px;
-  margin: 0 1px 1px 0;
-  background-color: #2a2a2a; }
-
-#test_box-container .ui-tabs-nav li.ui-tabs-selected {
-  margin: 0 1px 0 0;
-  height: inherit;
-  background-color: #292929; }
-
-#test_box-container .ui-tabs-nav li a {
-  display: block;
-  height: inherit;
-  color: #fff;
-  padding: 0 20px 0 32px;
-  text-decoration: none;
-  font-weight: bold;
-  background: no-repeat 8px 6px; }
-
-#test_box-container .ui-tabs-nav li.analytical_review a {
-  background-image: url(/images/test_box-container-ui-tabs-nav-li-analytical_review-a-bkg.png); }
-
-#test_box-container .ui-tabs-nav li.visual_comparison a {
-  background-image: url(/images/test_box-container-ui-tabs-nav-li-visual_comparison-a-bkg.png); }
-
-#test_box-container .ui-tabs-nav li.mobile_test a {
-  background-image: url(/images/miniphonelogo.png); }
-
-#test_box-container .ui-tabs-nav li.traceroute a {
-  background-image: url(/images/traceroute.png); }
+  .ui-tabs-nav li {
+    float: left;
+    height: 28px;
+    margin: 0 1px 1px 0;
+    background-color: #2a2a2a; }
+    .ui-tabs-nav li.ui-tabs-selected {
+      margin: 0 1px 0 0;
+      height: inherit;
+      background-color: #292929; }
+    @media only screen and (max-width: 568px) {
+      .ui-tabs-nav li:not(.ui-tabs-selected) {
+        color: transparent;
+        font-size: 0; }
+        .ui-tabs-nav li:not(.ui-tabs-selected) a {
+          padding: 0 0 0 10px; } }
+    .ui-tabs-nav li a {
+      display: block;
+      height: inherit;
+      color: #fff;
+      padding: 0 20px 0 32px;
+      text-decoration: none;
+      font-weight: bold;
+      background: no-repeat 8px 6px; }
+      .ui-tabs-nav li a:before {
+        content: "";
+        float: left;
+        width: 16px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-right: 12px; }
+    .ui-tabs-nav li.analytical_review a:before {
+      background-image: url(/images/test_box-container-ui-tabs-nav-li-analytical_review-a-bkg.png); }
+    .ui-tabs-nav li.visual_comparison a:before {
+      background-image: url(/images/test_box-container-ui-tabs-nav-li-visual_comparison-a-bkg.png); }
+    .ui-tabs-nav li.mobile_test a:before {
+      background-image: url(/images/miniphonelogo.png); }
+    .ui-tabs-nav li.traceroute a:before {
+      background-image: url(/images/traceroute.png); }
 
 .test_box.ui-tabs-hide {
   display: none; }
@@ -504,6 +514,46 @@ body {
   clear: both;
   padding: 20px;
   background-color: #292929; }
+  .test_box label {
+    float: left;
+    display: block;
+    width: 150px;
+    margin-right: 20px;
+    line-height: 1.2em;
+    font-weight: bold; }
+    .test_box label.auto_width {
+      width: auto; }
+    .test_box label.full_width {
+      float: none;
+      width: auto; }
+    .test_box label.inline {
+      float: none;
+      display: inline; }
+    .test_box label small {
+      font-weight: normal; }
+  .test_box input.text {
+    width: 100%;
+    max-width: 350px;
+    height: 22px;
+    padding: 0 5px;
+    background-color: #fff;
+    border: 1px solid #bbb; }
+    .test_box input.text.large {
+      width: 100%;
+      max-width: 680px;
+      height: 33px;
+      padding: 0 10px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none; }
+    .test_box input.text.short {
+      width: 40px; }
+  .test_box input.before_label {
+    float: left;
+    width: auto; }
+  .test_box select {
+    width: 100%;
+    max-width: 380px; }
 
 .input_fields {
   overflow: hidden;
@@ -513,53 +563,6 @@ body {
   overflow: hidden;
   margin: 0 0 20px;
   vertical-align: middle; }
-
-.test_box label {
-  float: left;
-  display: block;
-  width: 150px;
-  margin-right: 20px;
-  line-height: 1.2em;
-  font-weight: bold; }
-
-.test_box label small {
-  font-weight: normal; }
-
-.test_box label.auto_width {
-  width: auto; }
-
-.test_box label.full_width {
-  float: none;
-  width: auto; }
-
-.test_box label.inline {
-  float: none;
-  display: inline; }
-
-.test_box input.text {
-  width: 350px;
-  height: 22px;
-  padding: 0 5px;
-  background-color: #fff;
-  border: 1px solid #bbb; }
-
-.test_box input.text.large {
-  width: 680px;
-  height: 33px;
-  padding: 0 10px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none; }
-
-.test_box input.text.short {
-  width: 40px; }
-
-.test_box input.before_label {
-  float: left;
-  width: auto; }
-
-.test_box select {
-  width: 380px; }
 
 /* Test Sub-box */
 #test_subbox-container {
@@ -698,7 +701,8 @@ table.pretty td.even {
   width: 400px; }
 
 #location {
-  width: 370px; }
+  max-width: 370px;
+  width: 100%; }
 
 #simplemodal-overlay {
   background-color: #000; }

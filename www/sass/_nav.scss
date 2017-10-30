@@ -1,6 +1,5 @@
 /* Nav */
 
-$mobileMediaQuery: 'only screen and (max-width: 1000px)';
 
 // #nav_bkg {
 //     background-color: #000;
@@ -68,7 +67,7 @@ body {
     }
 
 
-    @media #{$mobileMediaQuery} {
+    @media #{$tabletLandscapeMediaQuery} {
         position: absolute;
         top: 0;
         right: 0;
@@ -102,7 +101,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;  
     border: 1px solid rgba(255, 255, 255, 0.5);   
-    margin: 22px;
+    margin: 20px;
     padding: 10px 5px;
     height: 33px;
     line-height: 33px;
@@ -111,7 +110,7 @@ body {
         background: rgba(255, 255, 255, 0.2);
     }
 
-    @media #{$mobileMediaQuery} {
+    @media #{$tabletLandscapeMediaQuery} {
         display: block;
     }
 }
@@ -133,7 +132,7 @@ body {
         color: #f1c52e;
     }
 
-    @media #{$mobileMediaQuery} {
+    @media #{$tabletLandscapeMediaQuery} {
         display: block;
     }
   }
