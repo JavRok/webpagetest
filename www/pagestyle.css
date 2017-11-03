@@ -532,11 +532,15 @@ input[type='text'] {
   background-color: #292929; }
   .test_box label {
     float: left;
+    clear: left;
     display: block;
     width: 150px;
     margin-right: 20px;
     line-height: 1.2em;
     font-weight: bold; }
+    @media only screen and (max-width: 768px) {
+      .test_box label {
+        width: 100%; } }
     .test_box label.auto_width {
       width: auto; }
     .test_box label.full_width {
@@ -716,10 +720,10 @@ table.pretty td.even {
 #addheaders {
   width: 400px; }
 
-#location {
-  max-width: 370px;
-  width: 100%; }
-
+/*#location {
+    max-width: 370px;
+    width: 100%;
+}*/
 #simplemodal-overlay {
   background-color: #000; }
 
@@ -845,6 +849,7 @@ table.pretty td.even {
     padding: 0 1em;
     border-radius: 2px;
     width: 100%;
+    max-width: none;
     height: 100%;
     border: 1px solid #e4e4e4;
     background: #f5f5f5;
@@ -1119,10 +1124,15 @@ table.result {
   color: #fff; }
 
 #visual_comparison input {
-  margin-right: 5px; }
+  margin-right: 5px;
+  float: left; }
 
 #visual_comparison .urldiv {
   padding-top: 0.5em; }
+  #visual_comparison .urldiv:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 #visual_comparison .industry {
   margin-right: 20px;
