@@ -88,11 +88,16 @@
     
     label {
         float: left;
+        clear: left;
         display: block;
         width: 150px;
         margin-right: 20px;
         line-height: 1.2em;
         font-weight: bold;
+    
+        @media #{$tabletPortraitMediaQuery} {
+            width: 100%;
+        }
     
         &.auto_width {
             width: auto;

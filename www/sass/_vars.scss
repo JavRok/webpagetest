@@ -5,7 +5,7 @@ $sm: '568px';
 
 // Media queries
 $tabletLandscapeMediaQuery: 'only screen and (max-width: #{$lg})';
-$tabletPortraitMediaQuery: 'only screen and (max-width: #{$sm})';
+$tabletPortraitMediaQuery: 'only screen and (max-width: #{$md})';
 $mobileMediaQuery: 'only screen and (max-width: #{$sm})';
 
 $border-radius: 2px;
