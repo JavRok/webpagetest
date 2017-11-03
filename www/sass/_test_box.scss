@@ -22,6 +22,10 @@
             margin: 0 1px 0 0;
             height: inherit;
             background-color: #292929;
+            
+            a {
+                padding-left: 20px;
+            }
         }
     
         @media #{$mobileMediaQuery} {
