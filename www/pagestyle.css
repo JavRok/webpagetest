@@ -861,6 +861,19 @@ table.pretty td.even {
     .goodlooking-select select:hover {
       background: white; }
 
+.tab_content {
+  padding: 20px;
+  display: none; }
+
+.tab_drawer_heading {
+  display: none; }
+
+@media screen and (max-width: 480px) {
+  .responsive-tabs {
+    display: none; }
+  .tab_drawer_heading {
+    display: block; } }
+
 /* details page */
 #headers {
   text-align: left;
