@@ -1,0 +1,22 @@
+.responsive-tabs {
+	
+}
+
+.tab_content {
+	padding: 20px;
+	display: none;
+}
+
+.tab_drawer_heading {
+	display: none;
+}
+
+@media screen and (max-width: 480px) {
+	.responsive-tabs {
+		display: none;
+	}
+	
+	.tab_drawer_heading {
+		display: block;
+	}
+}
