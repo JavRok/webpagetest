@@ -11,12 +11,34 @@
 	display: none;
 }
 
-@media screen and (max-width: 480px) {
+@media #{$mobileMediaQuery} {
 	.responsive-tabs {
 		display: none;
 	}
 	
 	.tab_drawer_heading {
 		display: block;
+		background: white;
+		color: $grey;
+		border-bottom: 1px solid $lightgrey;
+		padding: 10px 15px;
+		font-size: 1.3em;
+		cursor: pointer;
+
+		&:after {
+			content:"▼";
+			display: block;
+			float: right;
+			transition: transform 0.2s;
+		}
+
+		&.d_active {
+			border-bottom-color: transparent;
+			background: #eee;
+			&:after {
+				perspective: 1000;
+				transform: rotateX( 180deg );			
+			}
+		}
 	}
 }

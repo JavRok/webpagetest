@@ -9,14 +9,16 @@
     line-height: 29px;
 }
 
-#test_subbox-container .ui-tabs-nav li {
+#test_subbox-container .ui-tabs-nav li {    
     float: left;
     height: 28px;
     margin: 0 1px 1px 0;
+    padding: 0 5px;
     background-color: #bbb;
+    cursor: pointer;
 }
 
-#test_subbox-container .ui-tabs-nav li.ui-tabs-selected {
+#test_subbox-container .ui-tabs-nav li.active {
     margin: 0 1px 0 0;
     height: inherit;
     background-color: #eee;
@@ -36,6 +38,11 @@
     overflow: hidden;
     padding: 20px;
     background-color: #eee;
+    border-bottom: 1px solid $lightgrey;
+
+    @media #{$mobileMediaQuery} {
+        padding: 15px;
+    }
 }
 
 .test_subbox.ui-tabs-hide {

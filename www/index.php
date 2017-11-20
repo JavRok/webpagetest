@@ -324,17 +324,18 @@ $loc = ParseLocations($locations);
 											<input id="viewFirst" type="radio" name="fvonly" <?php if( $fvOnly ) echo 'checked=checked'; ?> value="1">First View Only
 										</li>
 										<li>
-										  <label for="videoCheck">Capture Video</label>
-										  <?php
+										<?php
 										  $video = 0;
 										  if (isset($_REQUEST['video']))
 											$video = (int)$_REQUEST['video'];
 										  ?>
-										  <input type="checkbox" name="video" id="videoCheck" class="checkbox" <?php if( $video ) echo 'checked=checked'; ?>>
+											<input type="checkbox" name="video" id="videoCheck" class="checkbox before_label" <?php if( $video ) echo 'checked=checked'; ?>>
+										  <label for="videoCheck" class="auto_width">Capture Video</label>										  
 										</li>
 										<li>
-											<label for="keep_test_private">Keep Test Private</label>
-											<input type="checkbox" name="private" id="keep_test_private" class="checkbox" <?php if (((int)@$_COOKIE["testOptions"] & 1) || array_key_exists('hidden', $_REQUEST) || GetSetting('defaultPrivate')) echo " checked=checked"; ?>>
+											<input type="checkbox" name="private" id="keep_test_private" class="checkbox before_label" 
+												<?php if (((int)@$_COOKIE["testOptions"] & 1) || array_key_exists('hidden', $_REQUEST) || GetSetting('defaultPrivate')) echo " checked=checked"; ?>>
+											<label for="keep_test_private" class="auto_width">Keep Test Private</label>
 										</li>
 										<li>
 											<label for="label">Label</label>

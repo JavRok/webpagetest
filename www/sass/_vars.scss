@@ -1,7 +1,7 @@
 // Breakpoints
 $lg: '1000px';
 $md: '768px';
-$sm: '568px';
+$sm: '599px';
 
 // Media queries
 $tabletLandscapeMediaQuery: 'only screen and (max-width: #{$lg})';
@@ -9,3 +9,7 @@ $tabletPortraitMediaQuery: 'only screen and (max-width: #{$md})';
 $mobileMediaQuery: 'only screen and (max-width: #{$sm})';
 
 $border-radius: 2px;
+
+// Colors
+$grey: #525252;
+$lightgrey: #949494;

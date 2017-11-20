@@ -40,7 +40,7 @@ jQuery( document ).ready(function($) {
 
 		$(".test_subbox").hide();
 		var d_activeTab = $(this).attr("rel");
-		$("#"+d_activeTab).fadeIn();
+		$("#"+d_activeTab).fadeIn(100);
 
 		$(".tab_drawer_heading").removeClass("d_active");
 		$(this).addClass("d_active");
