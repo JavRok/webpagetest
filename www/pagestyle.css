@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   height: 100%; }
 
@@ -74,8 +75,12 @@ textarea {
   max-width: 100%; }
 
 input.checkbox,
-input.radio {
+input.radio,
+input[type=radio] {
   margin: 0 10px 0 0; }
+
+input[type=radio]:not(:first-of-type) {
+  margin-left: 10px; }
 
 textarea {
   overflow-x: hidden;
@@ -492,7 +497,7 @@ input[type='text'] {
       background-color: #292929; }
       .ui-tabs-nav li.ui-tabs-selected a {
         padding-left: 20px; }
-    @media only screen and (max-width: 568px) {
+    @media only screen and (max-width: 599px) {
       .ui-tabs-nav li:not(.ui-tabs-selected) {
         color: transparent;
         font-size: 0; }
@@ -532,7 +537,6 @@ input[type='text'] {
   background-color: #292929; }
   .test_box label {
     float: left;
-    clear: left;
     display: block;
     width: 150px;
     margin-right: 20px;
@@ -596,9 +600,11 @@ input[type='text'] {
   float: left;
   height: 28px;
   margin: 0 1px 1px 0;
-  background-color: #bbb; }
+  padding: 0 5px;
+  background-color: #bbb;
+  cursor: pointer; }
 
-#test_subbox-container .ui-tabs-nav li.ui-tabs-selected {
+#test_subbox-container .ui-tabs-nav li.active {
   margin: 0 1px 0 0;
   height: inherit;
   background-color: #eee; }
@@ -614,7 +620,11 @@ input[type='text'] {
 .test_subbox {
   overflow: hidden;
   padding: 20px;
-  background-color: #eee; }
+  background-color: #eee;
+  border-bottom: 1px solid #949494; }
+  @media only screen and (max-width: 599px) {
+    .test_subbox {
+      padding: 15px; } }
 
 .test_subbox.ui-tabs-hide {
   display: none; }
@@ -868,11 +878,28 @@ table.pretty td.even {
 .tab_drawer_heading {
   display: none; }
 
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 599px) {
   .responsive-tabs {
     display: none; }
   .tab_drawer_heading {
-    display: block; } }
+    display: block;
+    background: white;
+    color: #525252;
+    border-bottom: 1px solid #949494;
+    padding: 10px 15px;
+    font-size: 1.3em;
+    cursor: pointer; }
+    .tab_drawer_heading:after {
+      content: "▼";
+      display: block;
+      float: right;
+      transition: transform 0.2s; }
+    .tab_drawer_heading.d_active {
+      border-bottom-color: transparent;
+      background: #eee; }
+      .tab_drawer_heading.d_active:after {
+        perspective: 1000;
+        transform: rotateX(180deg); } }
 
 /* details page */
 #headers {
