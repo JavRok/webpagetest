@@ -185,47 +185,51 @@ $loc = ParseLocations($locations);
                         <li><input type="text" name="url" id="url" value="<?php echo $url; ?>" class="text large" onfocus="if (this.value == this.defaultValue) {this.value = '';}" onblur="if (this.value == '') {this.value = this.defaultValue;}" onkeypress="if (event.keyCode == 32) {return false;}"></li>
                         <li>
                             <label for="location">Test Location</label>
-                            <select name="where" id="location">
-                                <?php
-                                $lastGroup = null;
-                                foreach($loc['locations'] as &$location)
-                                {
-                                    $selected = '';
-                                    if( isset($location['checked']) && $location['checked'] )
-                                        $selected = 'selected';
-                                    if (array_key_exists('group', $location) && $location['group'] != $lastGroup) {
-                                        if (isset($lastGroup))
-                                            echo "</optgroup>";
-                                        if (strlen($location['group'])) {
-                                            $lastGroup = $location['group'];
-                                            echo "<optgroup label=\"" . htmlspecialchars($lastGroup) . "\">";
-                                        } else
-                                            $lastGroup = null;
-                                    }
+                            <div class="goodlooking-select">
+                                <select name="where" id="location">
+                                    <?php
+                                    $lastGroup = null;
+                                    foreach($loc['locations'] as &$location)
+                                    {
+                                        $selected = '';
+                                        if( isset($location['checked']) && $location['checked'] )
+                                            $selected = 'selected';
+                                        if (array_key_exists('group', $location) && $location['group'] != $lastGroup) {
+                                            if (isset($lastGroup))
+                                                echo "</optgroup>";
+                                            if (strlen($location['group'])) {
+                                                $lastGroup = $location['group'];
+                                                echo "<optgroup label=\"" . htmlspecialchars($lastGroup) . "\">";
+                                            } else
+                                                $lastGroup = null;
+                                        }
 
-                                    echo "<option value=\"{$location['name']}\" $selected>{$location['label']}</option>";
-                                }
-                                if (isset($lastGroup))
-                                    echo "</optgroup>";
-                                ?>
-                            </select>
+                                        echo "<option value=\"{$location['name']}\" $selected>{$location['label']}</option>";
+                                    }
+                                    if (isset($lastGroup))
+                                        echo "</optgroup>";
+                                    ?>
+                                </select>
+                            </div>
                             <?php if (isset($settings['map'])) { ?>
                             <input id="change-location-btn" type=button onclick="SelectLocation();" value="Select from Map">
                             <?php } ?>
                         </li>
                         <li>
                             <label for="browser">Browser</label>
-                            <select name="browser" id="browser">
-                                <?php
-                                foreach( $loc['browsers'] as $key => &$browser )
-                                {
-                                    $selected = '';
-                                    if( isset($browser['selected']) && $browser['selected'] )
-                                        $selected = 'selected';
-                                    echo "<option value=\"{$browser['key']}\" $selected>{$browser['label']}</option>\n";
-                                }
-                                ?>
-                            </select>
+                            <div class="goodlooking-select">
+                                <select name="browser" id="browser">
+                                    <?php
+                                    foreach( $loc['browsers'] as $key => &$browser )
+                                    {
+                                        $selected = '';
+                                        if( $browser['selected'] )
+                                            $selected = 'selected';
+                                        echo "<option value=\"{$browser['key']}\" $selected>{$browser['label']}</option>\n";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
                             <span class="pending_tests hidden" id="pending_tests"><span id="backlog">0</span> Pending Tests</span>
                             <span class="cleared"></span>
                         </li>
@@ -284,17 +288,19 @@ $loc = ParseLocations($locations);
                                 <ul class="input_fields">
                                     <li>
                                         <label for="connection">Connection</label>
-                                        <select name="location" id="connection">
-                                            <?php
-                                            foreach( $loc['connections'] as $key => &$connection )
-                                            {
-                                                $selected = '';
-                                                if( isset($connection['selected']) && $connection['selected'] )
-                                                    $selected = 'selected';
-                                                echo "<option value=\"{$connection['key']}\" $selected>{$connection['label']}</option>\n";
-                                            }
-                                            ?>
-                                        </select>
+                                        <div class="goodlooking-select">
+                                            <select name="location" id="connection">
+                                                <?php
+                                                foreach( $loc['connections'] as $key => &$connection )
+                                                {
+                                                    $selected = '';
+                                                    if( $connection['selected'] )
+                                                        $selected = 'selected';
+                                                    echo "<option value=\"{$connection['key']}\" $selected>{$connection['label']}</option>\n";
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
                                         <br>
                                         <table class="configuration hidden" id="bwTable">
                                             <tr>
@@ -768,31 +774,33 @@ $loc = ParseLocations($locations);
                 <div id="map">
                 </div>
                 <p>
-                    <select id="location2">
-                        <?php
-                        $lastGroup = null;
-                        foreach($loc['locations'] as &$location)
-                        {
-                            $selected = '';
-                            if( isset($location['checked']) && $location['checked'] )
-                                $selected = 'selected';
+                    <div class="goodlooking-select">
+                        <select id="location2">
+                            <?php
+                            $lastGroup = null;
+                            foreach($loc['locations'] as &$location)
+                            {
+                                $selected = '';
+                                if( isset($location['checked']) && $location['checked'] )
+                                    $selected = 'selected';
 
-                            if (array_key_exists('group', $location) && $location['group'] != $lastGroup) {
-                                if (isset($lastGroup))
-                                    echo "</optgroup>";
-                                if (strlen($location['group'])) {
-                                    $lastGroup = $location['group'];
-                                    echo "<optgroup label=\"" . htmlspecialchars($lastGroup) . "\">";
-                                } else
-                                    $lastGroup = null;
+                                if (array_key_exists('group', $location) && $location['group'] != $lastGroup) {
+                                    if (isset($lastGroup))
+                                        echo "</optgroup>";
+                                    if (strlen($location['group'])) {
+                                        $lastGroup = $location['group'];
+                                        echo "<optgroup label=\"" . htmlspecialchars($lastGroup) . "\">";
+                                    } else
+                                        $lastGroup = null;
+                                }
+
+                                echo "<option value=\"{$location['name']}\" $selected>{$location['label']}</option>";
                             }
-
-                            echo "<option value=\"{$location['name']}\" $selected>{$location['label']}</option>";
-                        }
-                        if (isset($lastGroup))
-                            echo "</optgroup>";
-                        ?>
-                    </select>
+                            if (isset($lastGroup))
+                                echo "</optgroup>";
+                            ?>
+                        </select>
+                    </div>
                     <input id="location-ok" type=button class="simplemodal-close" value="OK">
                 </p>
             </div>

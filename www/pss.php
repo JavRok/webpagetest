@@ -137,31 +137,33 @@ $page_description = "Comparison Test$testLabel.";
                     <ul class="input_fields" id="morelocs">
                         <li>
                             <label for="location">Location</label>
-                            <select name="where" id="location">
-                                <?php
-                                $lastGroup = null;
-                                foreach($loc['locations'] as &$location)
-                                {
-                                    $selected = '';
-                                    if( $location['checked'] )
-                                        $selected = 'selected';
-                                        
-                                    if (array_key_exists('group', $location) && $location['group'] != $lastGroup) {
-                                        if (isset($lastGroup))
-                                            echo "</optgroup>";
-                                        if (strlen($location['group'])) {
-                                            $lastGroup = $location['group'];
-                                            echo "<optgroup label=\"" . htmlspecialchars($lastGroup) . "\">";
-                                        } else
-                                            $lastGroup = null;
-                                    }
+							<div class="goodlooking-select">
+								<select name="where" id="location">
+									<?php
+									$lastGroup = null;
+									foreach($loc['locations'] as &$location)
+									{
+										$selected = '';
+										if( $location['checked'] )
+											$selected = 'selected';
 
-                                    echo "<option value=\"{$location['name']}\" $selected>{$location['label']}</option>";
-                                }
-                                if (isset($lastGroup))
-                                    echo "</optgroup>";
-                                ?>
-                            </select>
+										if (array_key_exists('group', $location) && $location['group'] != $lastGroup) {
+											if (isset($lastGroup))
+												echo "</optgroup>";
+											if (strlen($location['group'])) {
+												$lastGroup = $location['group'];
+												echo "<optgroup label=\"" . htmlspecialchars($lastGroup) . "\">";
+											} else
+												$lastGroup = null;
+										}
+
+										echo "<option value=\"{$location['name']}\" $selected>{$location['label']}</option>";
+									}
+									if (isset($lastGroup))
+										echo "</optgroup>";
+									?>
+								</select>
+							</div>
                             <?php if( $settings['map'] ) { ?>
                             <input id="change-location-btn" type=button onclick="SelectLocation();" value="Select from Map">
                             <?php } ?>

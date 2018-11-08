@@ -78,18 +78,20 @@ $page_description = "Test network path from multiple locations around the world 
                         <li><input type="text" name="url" id="url" value="Host Name/IP Address" class="text large" onfocus="if (this.value == this.defaultValue) {this.value = '';}" onblur="if (this.value == '') {this.value = this.defaultValue;}" onkeypress="if (event.keyCode == 32) {return false;}"></li>
                         <li>
                             <label for="location">Test Location</label>
-                            <select name="where" id="location">
-                                <?php
-                                foreach($loc['locations'] as &$location)
-                                {
-                                    $selected = '';
-                                    if( $location['checked'] )
-                                        $selected = 'selected';
-                                        
-                                    echo "<option value=\"{$location['name']}\" $selected>{$location['label']}</option>";
-                                }
-                                ?>
-                            </select>
+							<div class="goodlooking-select">
+								<select name="where" id="location">
+									<?php
+									foreach($loc['locations'] as &$location)
+									{
+										$selected = '';
+										if( $location['checked'] )
+											$selected = 'selected';
+
+										echo "<option value=\"{$location['name']}\" $selected>{$location['label']}</option>";
+									}
+									?>
+								</select>
+							</div>
                             <?php if( $settings['map'] ) { ?>
                             <input id="change-location-btn" type=button onclick="SelectLocation();" value="Change">
                             <?php } ?>
@@ -98,30 +100,34 @@ $page_description = "Test network path from multiple locations around the world 
                         </li>
                         <li>
                             <label for="browser">Browser</label>
-                            <select name="browser" id="browser">
-                                <?php
-                                foreach( $loc['browsers'] as $key => &$browser )
-                                {
-                                    $selected = '';
-                                    if( $browser['selected'] )
-                                        $selected = 'selected';
-                                    echo "<option value=\"{$browser['key']}\" $selected>{$browser['label']}</option>\n";
-                                }
-                                ?>
-                            </select>
+							<div class="goodlooking-select">
+								<select name="browser" id="browser">
+									<?php
+									foreach( $loc['browsers'] as $key => &$browser )
+									{
+										$selected = '';
+										if( $browser['selected'] )
+											$selected = 'selected';
+										echo "<option value=\"{$browser['key']}\" $selected>{$browser['label']}</option>\n";
+									}
+									?>
+								</select>
+							</div>
                         </li>
                         <li class="hidden">
-                            <select name="location" id="connection">
-                                <?php
-                                foreach( $loc['connections'] as $key => &$connection )
-                                {
-                                    $selected = '';
-                                    if( $connection['selected'] )
-                                        $selected = 'selected';
-                                    echo "<option value=\"{$connection['key']}\" $selected>{$connection['label']}</option>\n";
-                                }
-                                ?>
-                            </select>
+							<div class="goodlooking-select">
+								<select name="location" id="connection">
+									<?php
+									foreach( $loc['connections'] as $key => &$connection )
+									{
+										$selected = '';
+										if( $connection['selected'] )
+											$selected = 'selected';
+										echo "<option value=\"{$connection['key']}\" $selected>{$connection['label']}</option>\n";
+									}
+									?>
+								</select>
+							</div>
                         </li>
                         <li>
                             <label for="number_of_tests">
@@ -152,18 +158,20 @@ $page_description = "Test network path from multiple locations around the world 
                 <div id="map">
                 </div>
                 <p>
-                    <select id="location2">
-                        <?php
-                        foreach($loc['locations'] as &$location)
-                        {
-                            $selected = '';
-                            if( $location['checked'] )
-                                $selected = 'SELECTED';
-                                
-                            echo "<option value=\"{$location['name']}\" $selected>{$location['label']}</option>";
-                        }
-                        ?>
-                    </select>
+					<div class="goodlooking-select">
+						<select id="location2">
+							<?php
+							foreach($loc['locations'] as &$location)
+							{
+								$selected = '';
+								if( $location['checked'] )
+									$selected = 'SELECTED';
+
+								echo "<option value=\"{$location['name']}\" $selected>{$location['label']}</option>";
+							}
+							?>
+						</select>
+					</div>
                     <input id="location-ok" type=button class="simplemodal-close" value="OK">
                 </p>
             </div>
