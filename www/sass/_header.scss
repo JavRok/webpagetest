@@ -1,0 +1,73 @@
+/* Header */
+
+$header-color: #181741;
+
+#header_container { 
+    background-color: #e2e2e2;
+}
+
+#header {
+    height: 100px;
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+    max-width: 980px;
+    background-color: $header-color;
+
+    // Trick to expand background to body width
+    &:before {
+        content: "";
+        position: absolute;
+        background-color: $header-color;
+        height: 100px;
+        width: 100%;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+
+.logo {
+    width: 222px;
+    margin: 0;
+    padding-top: 15px;
+    float: left;
+}
+
+.logo a {
+    display: block;
+    height: 71px;
+    text-indent: -999em;
+    background-image: url(/images/logo_wpt.png);
+}
+
+.headerAd {
+    float: right;
+    width: 728px;
+    height: 90px;
+    margin: 5px 0 1px;
+}
+
+#wptAuthBar {
+    width: 980px;
+    height: 18px;
+    text-align: right;
+    color: #fff;
+}
+
+#wptAuthBar a {
+    color: #fff;
+}
+
+.gplusone {
+    float: right;
+    padding: 4px 5px 0 0;
+}
+
+.alert {
+    width: 100%;
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+}

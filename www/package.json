@@ -1,0 +1,32 @@
+{
+  "name": "responsive-webpagetest",
+  "version": "1.0.0",
+  "description": "Revamped of classic wpt.org style, mobile friendly.",
+  "main": "viewport.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "uglify-js": "^3.1.3"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss sass/start.scss pagestyle.css",
+    "build-js": "uglifyjs js/site_original.js js/responsive.js -o js/site.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavRok/webpagetest.git"
+  },
+  "keywords": [
+    "webpagetest",
+    "responsive"
+  ],
+  "author": "javier.rocamora@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JavRok/webpagetest/issues"
+  },
+  "homepage": "https://github.com/JavRok/webpagetest#readme"
+}

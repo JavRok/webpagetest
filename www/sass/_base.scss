@@ -1,0 +1,107 @@
+body {
+    margin: 0 0 40px;
+    color: #222;
+    line-height: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: white;
+}
+
+.cufon-dincond_regular {
+    font-family: Arial Narrow, Arial, Helvetica, sans-serif;
+}
+
+.cufon-dincond_black {
+    font-family: Arial Narrow, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.8em;
+    line-height: 1em;
+}
+
+h2 {
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+h3 {
+    font-size: 2em;
+    line-height: 1em;
+}
+
+h4 {
+    font-size: 1em;
+    line-height: 1em;
+}
+
+h5 {
+    font-size: 1em;
+    line-height: 1em;
+}
+
+h6 {
+    font-size: 0.83em;
+    line-height: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0.5em 0;
+    margin: 0;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+}
+
+img {
+    border: none;
+}
+
+input,
+select,
+textarea {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+input.checkbox,
+input.radio {
+    margin: 0 10px 0 0;
+}
+
+textarea {
+    overflow-x: hidden;
+    width: 400px;
+    height: 100px;
+    padding: 3px;
+    max-width: 99%;
+}
+
+h2 .small {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+h2 .medium {
+    font-weight: normal;
+    line-height: 18px;
+    font-size: 18px;
+}

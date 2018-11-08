@@ -1,0 +1,39 @@
+/* Mobile */
+
+#mobile_options {
+    float: left;
+    width: 300px;
+}
+
+#mobile_logo {
+    margin-top: 100px;
+    float: right;
+    width: 270px;
+    height: 59px;
+}
+
+#mobile_test a {
+    color: #fff;
+}
+
+#start_test-container {
+    float: left;
+    padding: 28px 0 0 21px;
+    background: url(/images/start_test-container-bkg.png) no-repeat left 40px;
+    text-align: center;
+}
+
+.start_test {
+    cursor: pointer;
+    width: 200px;
+    height: 36px;
+    padding: 0;
+    background: url(/images/start_test-bkg.png);
+    border: none;
+}
+
+#sponsor {
+    display: none;
+    background-color: #fff;
+}
+

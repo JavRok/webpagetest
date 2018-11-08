@@ -1,0 +1,42 @@
+.tooltip {
+    display: none;
+    background-color: LightGoldenRodYellow;
+    border: 1px solid black;
+    padding: 0.5em;
+    width: 40em;
+    z-index: 3000;
+}
+
+.tooltip .label {
+    color: yellow;
+    width: 35px;
+}
+
+.tooltip a {
+    color: #ad4;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+.notification-container {
+    float: right;
+    width: 180px;
+}
+
+.notification {
+    margin: 0 0 10px;
+    padding: 10px;
+    line-height: 1.3em;
+    font-weight: bold;
+    background-color: #ffd226;
+}
+
+.notification a {
+    color: #00f;
+}
+
+.message,
+.warning {
+    min-height: 32px;
+}

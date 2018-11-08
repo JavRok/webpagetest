@@ -71,9 +71,11 @@ if (!defined('EMBED')) {
         }
     ?>
     </div>
-</div>
 
-<div id="nav_bkg"><div id="nav_bar"><div class="page"><ul id="nav" class="cufon-dincond_black"><?php
+
+    <div class="menu_btn">Menu</div>
+    <ul id="nav" aria-role="navigation">
+        <button class="close_menu" aria-label="Close">✖</button><?php
         if ($id) {
             $resultUrl = "/results.php?test=$id";
             if (array_key_exists('end', $_REQUEST))
@@ -125,7 +127,8 @@ if (!defined('EMBED')) {
         }
 ?></ul>
 
-</div></div></div>
+</div>
+
 
 <?php
 if (!defined('BARE_UI') && isset($settings['alert']) && strlen($settings['alert'])) {
@@ -339,7 +342,7 @@ if( !strcasecmp('Test Result', $tab) && !@$nosubheader && !defined('EMBED') )
             echo "<li><a href=\"$tabUrl\" title=\"Cloudinary Image Analysis (external) - Opens in a new window.\" target=\"_blank\" rel=\"noopener\" style=\"padding-right: 2px;\">Image Analysis<img src=\"/images/external_header.svg\" style=\"padding-top: 4px; float: right;\"></a></li>";
           }
         }
-        
+
         // Add the "Request Map" link
         if (isset($id) && strlen($id)) {
           $tabUrl = GetSetting('request_map');

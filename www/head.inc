@@ -7,6 +7,7 @@ if( strlen($page_description) )
 ?>
 <meta name="author" content="Patrick Meenan">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="icon" href="/images/favicon.png" type="image/png">
