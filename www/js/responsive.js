@@ -3,14 +3,19 @@ jQuery( document ).ready(function($) {
 
     $('.menu_btn').on('click', function (evt) {
         evt.stopPropagation();
-        console.log('asdfasdfasdf');
-        $menu.addClass('transitioning').delay(500).toggleClass('opened');
+        $menu.addClass('clicked').toggleClass('opened');
+        setTimeout(function() {
+        	$menu.removeClass('clicked');
+        }, 500);
     });
 
     $('body').on('click', function (evt) {
 
         if (!$(evt.target).is($menu)) {
-            $menu.removeClass('opened');
+            $menu.addClass('clicked').removeClass('opened');
+	        setTimeout(function() {
+		        $menu.removeClass('clicked');
+	        }, 500);
         }        
     });
 
