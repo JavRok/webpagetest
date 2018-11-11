@@ -3,7 +3,8 @@ jQuery( document ).ready(function($) {
 
     $('.menu_btn').on('click', function (evt) {
         evt.stopPropagation();
-        $menu.toggleClass('opened');
+        console.log('asdfasdfasdf');
+        $menu.addClass('transitioning').delay(500).toggleClass('opened');
     });
 
     $('body').on('click', function (evt) {
@@ -37,15 +38,19 @@ jQuery( document ).ready(function($) {
 	});
     /* if in drawer mode */
 	$(".tab_drawer_heading").click(function() {
-
 		$(".test_subbox").hide();
-		var d_activeTab = $(this).attr("rel");
-		$("#"+d_activeTab).fadeIn(100);
+		$("ul.responsive-tabs li").removeClass("active");
+
+		if ($(this).hasClass("d_active")) {
+			$(this).removeClass("d_active");
+			return;
+		}
 
 		$(".tab_drawer_heading").removeClass("d_active");
-		$(this).addClass("d_active");
 
-		$("ul.responsive-tabs li").removeClass("active");
+		var d_activeTab = $(this).attr("rel");
+		$("#"+d_activeTab).fadeIn(100);
+		$(this).addClass("d_active");
 		$("ul.responsive-tabs li[rel^='"+d_activeTab+"']").addClass("active");
 	});
 
