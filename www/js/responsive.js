@@ -11,6 +11,7 @@ jQuery( document ).ready(function($) {
 
     $('body').on('click', function (evt) {
 
+    	// Need a temp .clicked class to avoid unwanted css transition
         if (!$(evt.target).is($menu)) {
             $menu.addClass('clicked').removeClass('opened');
 	        setTimeout(function() {
@@ -25,7 +26,7 @@ jQuery( document ).ready(function($) {
     // https://codepen.io/kazmeyer/pen/lzqhf
 
 	$(".test_subbox").hide();
-	$(".test_subbox:first").show();
+	$(".test_subbox:first").slideDown(300);
 
     /* if in tab mode */
 	$("ul.responsive-tabs li").click(function() {
@@ -43,7 +44,7 @@ jQuery( document ).ready(function($) {
 	});
     /* if in drawer mode */
 	$(".tab_drawer_heading").click(function() {
-		$(".test_subbox").hide();
+		$(".test_subbox").slideUp(300);
 		$("ul.responsive-tabs li").removeClass("active");
 
 		if ($(this).hasClass("d_active")) {
@@ -54,7 +55,7 @@ jQuery( document ).ready(function($) {
 		$(".tab_drawer_heading").removeClass("d_active");
 
 		var d_activeTab = $(this).attr("rel");
-		$("#"+d_activeTab).fadeIn(100);
+		$("#"+d_activeTab).slideDown(400);
 		$(this).addClass("d_active");
 		$("ul.responsive-tabs li[rel^='"+d_activeTab+"']").addClass("active");
 	});

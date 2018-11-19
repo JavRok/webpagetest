@@ -14,6 +14,7 @@
   "scripts": {
     "build-css": "node-sass --include-path scss sass/start.scss pagestyle.css",
     "build-js": "uglifyjs js/site_original.js js/responsive.js -o js/site.js",
+    "build": "npm run build-css && npm run build-js",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
