@@ -360,8 +360,11 @@ $loc = ParseLocations($locations);
 											if (isset($_REQUEST['fvonly']))
 											  $fvOnly = (int)$_REQUEST['fvonly'];
 											?>
-											<input id="viewBoth" type="radio" name="fvonly" <?php if( !$fvOnly ) echo 'checked=checked'; ?> value="0">First View and Repeat View
-											<input id="viewFirst" type="radio" name="fvonly" <?php if( $fvOnly ) echo 'checked=checked'; ?> value="1">First View Only
+                                            <br>
+                                            <label class="sublabel" for="viewBoth">First View and Repeat View</label>
+                                            <input id="viewBoth" type="radio" name="fvonly" <?php if( !$fvOnly ) echo 'checked=checked'; ?> value="0">
+                                            <label class="sublabel" for="viewFirst">First View Only</label>
+                                            <input id="viewFirst" type="radio" name="fvonly" <?php if( $fvOnly ) echo 'checked=checked'; ?> value="1">
 										</li>
 										<li>
 										<?php
@@ -525,6 +528,7 @@ $loc = ParseLocations($locations);
 												  $selectedDevice = $_COOKIE['mdev'];
 												if (isset($_REQUEST['mdev']) && isset($devices[$_REQUEST['mdev']]))
 												  $selectedDevice = $_REQUEST['mdev'];
+												echo '<div class="goodlooking-select goodlooking-select--inline">';
 												echo '<select name="mobileDevice" id="mobileDevice">';
 												$lastGroup = null;
 												foreach ($devices as $deviceName => $deviceInfo) {
@@ -543,7 +547,7 @@ $loc = ParseLocations($locations);
 												}
 												if (isset($lastGroup))
 												  echo "</optgroup>";
-												echo '</select>';
+												echo '</select></div>';
 											  }
 											}
 											?>

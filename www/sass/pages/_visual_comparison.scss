@@ -2,11 +2,16 @@
 
 #visual_comparison {
     a {
-        color: #fff
+        color: #fff;
+        float: left;
+    }
+
+    label {
+        line-height: 24px;
     }
     
     input {
-        margin-right: 5px;
+        margin-right: 15px;
         float: left;
     }
     

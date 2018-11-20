@@ -46,5 +46,26 @@ $color-paragraph: #545454;
 			background: $input-bg-focus;
 		}
 	}
+
+	&--inline {
+		width: auto;
+		display: inline-block;
+		height: 25px;
+		line-height: 25px;
+		margin-top: -5px;
+
+		@media #{$tabletPortraitMediaQuery} {
+			margin: 5px 0;
+		}
+		&:after {
+			right: 2px;
+			top: 4px;
+			bottom: 3px;
+		}
+
+		select {
+			width: auto;
+		}
+	}
 	
 }
