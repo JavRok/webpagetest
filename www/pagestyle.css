@@ -236,7 +236,8 @@ input[type='text'] {
   margin: auto;
   width: 100%;
   max-width: 980px;
-  background-color: #181741; }
+  background-color: #181741;
+  overflow: hidden; }
   #header:before {
     content: "";
     position: absolute;
@@ -259,6 +260,7 @@ input[type='text'] {
   background-image: url(/images/logo_wpt.png); }
 
 .headerAd {
+  display: none;
   float: right;
   width: 728px;
   height: 90px;
@@ -349,7 +351,8 @@ input[type='text'] {
   margin: 20px;
   padding: 10px 5px;
   height: 33px;
-  line-height: 33px; }
+  line-height: 33px;
+  z-index: 2; }
   .menu_btn:hover, .menu_btn:active {
     background: rgba(255, 255, 255, 0.2); }
   @media only screen and (max-width: 1000px) {
@@ -601,10 +604,8 @@ input[type='text'] {
   margin: 0; }
 
 .input_fields li {
-  /* min-height: 20px; */
-  margin: 0 0 15px;
-  vertical-align: middle;
-  }
+  margin: 0 0 16px;
+  vertical-align: middle; }
   .input_fields li:after {
     content: "";
     display: table;
@@ -891,23 +892,20 @@ table.pretty td.even {
     -moz-appearance: none;
     appearance: none; }
     .goodlooking-select select:hover {
-      background: white;
-      }
+      background: white; }
   .goodlooking-select--inline {
     width: auto;
     display: inline-block;
     height: 25px;
     line-height: 25px;
-    /* top: -4px; */
-    max-height: 100%;
-    margin: 5px 0;
-    }
+    margin-top: -5px; }
+    @media only screen and (max-width: 768px) {
+      .goodlooking-select--inline {
+        margin: 5px 0; } }
     .goodlooking-select--inline:after {
       right: 2px;
       top: 4px;
-      bottom: 3px;
-      /* background-size: contain; */
-      }
+      bottom: 3px; }
     .goodlooking-select--inline select {
       width: auto; }
 

@@ -14,6 +14,7 @@ $header-color: #181741;
     width: 100%;
     max-width: 980px;
     background-color: $header-color;
+    overflow: hidden;
 
     // Trick to expand background to body width
     &:before {
@@ -43,6 +44,7 @@ $header-color: #181741;
 }
 
 .headerAd {
+    display: none;
     float: right;
     width: 728px;
     height: 90px;

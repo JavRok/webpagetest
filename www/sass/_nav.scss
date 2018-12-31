@@ -1,13 +1,6 @@
 /* Nav */
 
 
-// #nav_bkg {
-//     background-color: #000;
-//     line-height: 1em;
-//     clear: both;
-//     font-size: 16px;
-// }
-
 #nav {
     // height: 30px;
     text-transform: uppercase;
@@ -46,7 +39,6 @@
         }
 
         &.current a {
-            // text-decoration: underline;
             color: #f1c52e;
 
             &:after {
@@ -103,6 +95,7 @@
     padding: 10px 5px;
     height: 33px;
     line-height: 33px;
+    z-index: 2;
 
     &:hover, &:active {
         background: rgba(255, 255, 255, 0.2);
